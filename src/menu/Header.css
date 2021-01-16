@@ -1,0 +1,22 @@
+.Header {
+    background-color: #000;
+    height: 100px;
+    width: 100%;
+}
+.Header .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* color: #fff */
+}
+.Header .nav {
+    font-size: 2rem;
+    color: #fff;
+
+}
+.Header h1 {
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
