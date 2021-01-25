@@ -1,0 +1,36 @@
+table {
+    /* margin-top: 20px; */
+    width: 90%;
+    margin: 50px auto;
+    border: solid 1px #333;
+}
+table tr th {
+    background-color: rgb(166, 104, 224);
+    color: white;
+    height: 40px;
+    font-size: 20px;
+    width: 50%;
+}
+tr td {
+    width: 50%;
+    background-color: rgba(137, 43, 226, 0.356);    
+    /* color: #fff; */
+    font-size: 20px;
+}
+tr .acoes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+tr td.tarefas {
+    justify-content: center;
+    text-align: center;
+}
+@media(max-width: 790px) {
+    table {
+        margin-top: 100px;
+    }
+}

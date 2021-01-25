@@ -1,6 +1,6 @@
 .Header {
     background-color: #000;
-    height: 100px;
+    height: 120px;
     width: 100%;
 }
 .Header .nav {
@@ -9,14 +9,21 @@
     justify-content: space-evenly;
     /* color: #fff */
 }
-.Header .nav {
-    font-size: 2rem;
-    color: #fff;
 
+.Header .nav h2{
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 10px;
 }
 .Header h1 {
     color: #fff;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+@media(max-width: 790px) {
+    .Header .nav {
+        justify-content: space-between;
+        /* color: #fff */
+    }
 }
