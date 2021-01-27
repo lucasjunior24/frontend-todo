@@ -1,13 +1,20 @@
 .TodoForm {
     height: 20px;
-    width: 90%;
+    width: 80%;
     display: grid;
     margin: 0 auto;
     grid-template-columns: 2fr 1fr;
+    margin-top: 30px;
 }
 .TodoForm input {
     height: 40px;
-    margin: 4px;
+    margin: 6px 4px 4px;
+    border-radius: 8px;
+    text-align: center;
+    /* cursor: pointer; */
+    line-break: normal;
+    border: 0;
+    border-bottom: solid 2px rebeccapurple;
 }
 .TodoForm .butoes {
     width: 100%;
@@ -16,9 +23,6 @@
     justify-content: center;
     align-items: center;
 }
-/* .TodoForm .butoes Button {
-    margin: 4px;
-} */
 
 @media(max-width: 1000px) {
     .TodoForm {
@@ -26,7 +30,7 @@
         grid-template-columns: 1fr 1fr;
     }
 }
-@media(max-width: 790px) {
+@media(max-width: 800px) {
     .TodoForm {
         grid-template-columns: 1fr;
     }

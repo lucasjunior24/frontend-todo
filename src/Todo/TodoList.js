@@ -8,10 +8,11 @@ function TodoList(props) {
     const list = props.list || []
     return list.map(todo => (
       <tr key={todo._id}>
-        <td className='tarefas'>{todo.description}</td>
+        <td className={`tarefas ` + (todo.done ? 'markedAsDone' : '')}>{todo.description}</td>
         <td className='acoes'>
-          <Button color='excluir' name='Excluir' />
-          <Button color='editar' name='Editar' />
+          <Button color='realizar' name='Realizar' hide={todo.done} onClick={() => props.handleMarkAsDone(todo)} />
+          <Button color='desfazer' name='Desfazer' hide={!todo.done} onClick={() => props.handleMarkAsPending(todo)} />
+          <Button color='excluir' name='Excluir' hide={!todo.done} onClick={() => props.handleRemove(todo)} />
         </td>
       </tr>
     )) 

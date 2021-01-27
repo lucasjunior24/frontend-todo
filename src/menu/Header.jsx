@@ -7,7 +7,7 @@ function Header() {
               <Link to='/' ><h2>  Todo</h2></Link>
               <Link to='/Sobre' ><h2>Sobre  </h2></Link>
           </div>
-          <h1>Lista de tarefas</h1>
+          <h1>Lista de Tarefas</h1>
       </div>
     );
   }

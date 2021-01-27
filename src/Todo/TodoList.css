@@ -1,19 +1,26 @@
 table {
     /* margin-top: 20px; */
-    width: 90%;
+    width: 80%;
     margin: 50px auto;
-    border: solid 1px #333;
+    border: 0;
+    border-radius: 8px;
+}
+
+.markedAsDone {
+    text-decoration: line-through;
+    color: red;
 }
 table tr th {
     background-color: rgb(166, 104, 224);
     color: white;
-    height: 40px;
-    font-size: 20px;
+    height: 52px;
+    font-size: 24px;
     width: 50%;
+    border-radius: 8px 8px;
 }
 tr td {
     width: 50%;
-    background-color: rgba(137, 43, 226, 0.356);    
+    background-color: rgba(172, 135, 207, 0.342);    
     /* color: #fff; */
     font-size: 20px;
 }
@@ -32,5 +39,6 @@ tr td.tarefas {
 @media(max-width: 790px) {
     table {
         margin-top: 100px;
+        width: 90%;
     }
 }

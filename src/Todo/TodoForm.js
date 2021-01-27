@@ -9,8 +9,8 @@ function TodoForm(props) {
           onChange={props.handleChange} />
         <div className="butoes">
           <Button color='salvar' name='Salvar' onClick={props.handleAdd}/>
-          <Button color='pesquisar' name='Pesquisar' />
-          <Button color='limpar' name='Limpar' />
+          <Button color='pesquisar' name='Pesquisar' onClick={props.handleSearch} />
+          <Button color='limpar' name='Limpar' onClick={props.handleClear} />
         </div>
 
     </div>
