@@ -10,8 +10,6 @@ function Routes() {
             <Route path='/sobre' component={Sobre} />
             <Redirect from='*' to='/' />
         </Switch>
-
-      
     );
   }
   

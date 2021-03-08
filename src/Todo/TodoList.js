@@ -1,24 +1,19 @@
-import Button from "../components/Button"
+import React from "react";
+import "./TodoList.css";
 
-import './TodoList.css'
-
-function TodoList(props) {
-
-  const renderRows = () => {
+const TodoList = props => {
+  function renderRows() {
     const list = props.list || []
     return list.map(todo => (
-      <tr key={todo._id}>
-        <td className={`tarefas ` + (todo.done ? 'markedAsDone' : '')}>{todo.description}</td>
-        <td className='acoes'>
-          <Button color='realizar' name='Realizar' hide={todo.done} onClick={() => props.handleMarkAsDone(todo)} />
-          <Button color='desfazer' name='Desfazer' hide={!todo.done} onClick={() => props.handleMarkAsPending(todo)} />
-          <Button color='excluir' name='Excluir' hide={!todo.done} onClick={() => props.handleRemove(todo)} />
-        </td>
-      </tr>
-    )) 
+        <tr key={todo._id}>
+          <td className='tarefas'>{todo.description}</td>
+          <td className='acoes' ><button className='remover' onClick={() => props.handleRemove(todo)}>Remover</button></td>
+        </tr>
+      )
+    ) 
   }
   return (
-    <table>
+    <table className='table'>
       <thead>
         <tr>
           <th>Descrição</th>
@@ -29,7 +24,7 @@ function TodoList(props) {
         {renderRows()}
       </tbody>
     </table>
-  );
+  )
 }
 
-export default TodoList;
+export default TodoList

@@ -36,6 +36,11 @@ tr td.tarefas {
     justify-content: center;
     text-align: center;
 }
+
+.remover {
+    background: red;
+    color: white;
+}
 @media(max-width: 790px) {
     table {
         margin-top: 100px;
