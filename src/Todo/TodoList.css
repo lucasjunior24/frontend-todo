@@ -32,14 +32,24 @@ tr .acoes {
     align-items: center;
     
 }
-tr td.tarefas {
+tr .acoes  button {
+    width: 3rem;
+    color: white;
+}
+tr .tarefas {
+    
     justify-content: center;
     text-align: center;
 }
 
 .remover {
     background: red;
-    color: white;
+}
+.concluido {
+    background: rgb(7, 184, 7);
+}
+.pendente {
+    background: rgb(230, 226, 4);
 }
 @media(max-width: 790px) {
     table {

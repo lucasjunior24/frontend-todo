@@ -1,6 +1,8 @@
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
+
 import { Component } from 'react'
+
 import axios from 'axios'
 
 
@@ -18,6 +20,8 @@ export default class Todo extends Component {
     this.handleAdd = this.handleAdd.bind(this)
 
     this.handleRemove = this.handleRemove.bind(this)
+    this.marcarComoPendente = this.marcarComoPendente.bind(this)
+    this.marcarComoConcluido = this.marcarComoConcluido.bind(this)
 
     this.refresh()
   }
@@ -39,6 +43,14 @@ export default class Todo extends Component {
     axios.delete(`${URL}/${todo._id}`)
       .then(resp => this.refresh())
   }
+  marcarComoConcluido(todo) {
+    axios.put(`${URL}/${todo._id}`, { ...todo, done: true })
+      .then(resp => this.refresh())
+  }
+  marcarComoPendente(todo) {
+    axios.put(`${URL}/${todo._id}`, { ...todo, done: false })
+      .then(resp => this.refresh())
+  }
  
   render() {
     return (
@@ -51,7 +63,10 @@ export default class Todo extends Component {
           />
         <TodoList 
           list={this.state.list}
-          handleRemove={this.handleRemove} />
+          handleRemove={this.handleRemove} 
+          marcarComoConcluido={this.marcarComoConcluido}
+          marcarComoPendente={this.marcarComoPendente}
+          />
       </div>
     );
   }
