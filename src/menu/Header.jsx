@@ -11,7 +11,7 @@ function Header() {
                     < TiArrowLeftThick /><h4> Tarefas</h4>
                   </button>
               </Link>
-              <Link to='/Sobre' >
+              <Link to='/sobre' >
                   <button>
                       <h4>Sobre </h4>< TiArrowRightThick />
                   </button>

@@ -1,6 +1,6 @@
-import Header from './Menu/Header';
+import Header from './Menu/Header.jsx';
 import Routes from './routes' 
-import { HashRouter} from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 import './App.css'
 function App() {
