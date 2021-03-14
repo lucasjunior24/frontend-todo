@@ -21,9 +21,15 @@
     color: #fff;
     margin: 10px;
     padding: 10px;
+    min-width: 120px;
 
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
+
 .Header .nav button:hover {
     background-color: rgb(117, 59, 172);
 }
@@ -37,17 +43,10 @@
 @media(max-width: 690px) {
     
     .Header .nav {
-        justify-content: space-between;
+        width: 100%;
         /* color: #fff */
     }
     .Header h1 {
     font-size: 2rem;
-    }
-}
-
-@media(max-width: 400px) {
-    .Header .nav button { 
-        margin: 0;
-        padding: 0;
     }
 }
