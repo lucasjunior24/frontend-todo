@@ -5,7 +5,6 @@ import { Component } from 'react'
 
 import axios from 'axios'
 
-
 // const local = 'http://localhost:3003/api/todos'
 const URL = "https://lista-tarefa-b.herokuapp.com/todos"
 
@@ -25,33 +24,37 @@ export default class Todo extends Component {
 
     this.refresh()
   }
+
   refresh() {
     axios.get(`${URL}`)
       .then(resp => this.setState({ ...this.state, description: '', list: resp.data.data }))
   }
- 
-
+  
   handleChange(e) {
     this.setState({...this.state, description: e.target.value }) // valor do input vai pra description
   }
+
   handleAdd() {
     const description = this.state.description
     axios.post(URL, { description })
       .then(resp => this.refresh()) 
   }
+
   handleRemove(todo) {
     axios.delete(`${URL}/${todo._id}`)
       .then(resp => this.refresh())
   }
+
   marcarComoConcluido(todo) {
     axios.put(`${URL}/${todo._id}`, { ...todo, done: true })
       .then(resp => this.refresh())
   }
+
   marcarComoPendente(todo) {
     axios.put(`${URL}/${todo._id}`, { ...todo, done: false })
       .then(resp => this.refresh())
   }
- 
+  
   render() {
     return (
       <div className="App">
