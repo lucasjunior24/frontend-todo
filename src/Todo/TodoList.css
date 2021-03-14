@@ -30,7 +30,6 @@ tr .acoes {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 }
 tr .acoes  button {
     width: 3rem;
