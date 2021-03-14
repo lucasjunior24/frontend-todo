@@ -1,4 +1,4 @@
-import Header from './Menu/Header.jsx';
+import Header from './menu/Header.jsx';
 import Routes from './routes' 
 import { HashRouter } from 'react-router-dom'
 
