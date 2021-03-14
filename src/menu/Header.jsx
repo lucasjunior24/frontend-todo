@@ -4,8 +4,8 @@ function Header() {
     return (
       <div className="Header">
           <div className='nav'>
-              <Link to='/' ><h2>  Todo</h2></Link>
-              <Link to='/Sobre' ><h2>Sobre  </h2></Link>
+              <Link to='/' ><button>Todo</button></Link>
+              <Link to='/Sobre' ><button>Sobre</button></Link>
           </div>
           <h1>Lista de Tarefas</h1>
       </div>

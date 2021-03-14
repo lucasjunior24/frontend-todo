@@ -2,18 +2,30 @@
     background-color: #000;
     height: 120px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 .Header .nav {
+    width: 80%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* color: #fff */
+    justify-content: space-between;
+    align-items: center;
+
 }
 
-.Header .nav h2{
+.Header .nav button {
+    background-color: rgb(166, 104, 224);
     font-size: 1.2rem;
     color: #fff;
     margin: 10px;
+    padding: 10px;
+
+    cursor: pointer;
+}
+.Header .nav button:hover {
+    background-color: rgb(117, 59, 172);
 }
 .Header h1 {
     font-size: 2.8rem;
@@ -22,9 +34,20 @@
     align-items: center;
     text-align: center;
 }
-@media(max-width: 790px) {
+@media(max-width: 690px) {
+    
     .Header .nav {
         justify-content: space-between;
         /* color: #fff */
+    }
+    .Header h1 {
+    font-size: 2rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .Header .nav button { 
+        margin: 0;
+        padding: 0;
     }
 }
