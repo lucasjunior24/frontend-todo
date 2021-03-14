@@ -1,7 +1,7 @@
 import { Switch, Route, Redirect } from 'react-router-dom'
 
 import Todo from './Todo/Todo'
-import Sobre from './menu/Sobre'
+import Sobre from './Menu/Sobre'
 
 function Routes() {
     return (
